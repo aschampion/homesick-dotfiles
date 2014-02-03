@@ -1,0 +1,6 @@
+[auth]
+username = aschampion
+
+[options]
+scm = git
+protocol = ssh
