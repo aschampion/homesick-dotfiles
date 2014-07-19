@@ -37,10 +37,12 @@ ZSH_THEME="agnoster" # alternative: bira
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+emulate sh -c '. ~/.profile'
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vi-mode)
+plugins=(git vi-mode virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -48,3 +50,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 
 DEFAULT_USER="drew"
+
+# added by travis gem
+[ -f /Users/drew/.travis/travis.sh ] && source /Users/drew/.travis/travis.sh
+
