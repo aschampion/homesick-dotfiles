@@ -3,3 +3,5 @@
 	name = Andrew Champion
 [github]
 	user = aschampion
+[push]
+	default = simple
