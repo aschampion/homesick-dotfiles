@@ -5,3 +5,5 @@
 	user = aschampion
 [push]
 	default = simple
+[core]
+	editor = vim
