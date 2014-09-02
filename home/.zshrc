@@ -49,7 +49,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 
-DEFAULT_USER="drew"
+DEFAULT_USER="championa"
 
 # added by travis gem
 [ -f /Users/drew/.travis/travis.sh ] && source /Users/drew/.travis/travis.sh
