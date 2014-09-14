@@ -55,3 +55,14 @@ DEFAULT_USER="drew"
 # added by travis gem
 [ -f /Users/drew/.travis/travis.sh ] && source /Users/drew/.travis/travis.sh
 
+# Fix backspace in vi insertion to be vim-like
+bindkey "^?" backward-delete-char
+
+# tmux aliases
+alias tma='tmux attach || tmux'
+alias tmn='tmux new-session -s'
+alias tmux-top='tmux attach -t topy || tmux new-session -s topy -d "htop" \; rename-window htop \; split-window -v -p 15 "sudo iotop -o" \; attach -t topy'
+alias tmux-dude='tmux attach -t git-dude || tmux new-session -s git-dude -d "cd ~/.git-dude && git dude"'
+
+export EDITOR='vim'
+
