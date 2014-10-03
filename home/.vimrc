@@ -5,7 +5,7 @@ set showmatch
 
 filetype indent plugin on
 
-set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+set rtp+=$HOME/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/
 
 " Always show statusline
 set laststatus=2
