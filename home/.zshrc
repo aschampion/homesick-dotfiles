@@ -71,3 +71,6 @@ alias tmux-dude='tmux attach -t git-dude || tmux new-session -s git-dude -d "cd 
 
 export EDITOR='vim'
 
+
+# added by travis gem
+[ -f /home/championa/.travis/travis.sh ] && source /home/championa/.travis/travis.sh
