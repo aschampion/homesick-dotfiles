@@ -39,6 +39,7 @@ ZSH_THEME="agnoster" # alternative: bira
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 emulate sh -c '. ~/.profile'
+source ~/.bashrc
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -50,7 +51,18 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 
-DEFAULT_USER="drew"
+DEFAULT_USER="championa"
+
+# Fix backspace in vi insertion to be vim-like
+bindkey "^?" backward-delete-char
+
+# tmux aliases
+alias tma='tmux attach || tmux'
+alias tmn='tmux new-session -s'
+alias tmux-top='tmux attach -t topy || tmux new-session -s topy -d "htop" \; rename-window htop \; split-window -v -p 15 "sudo iotop -o" \; attach -t topy'
+alias tmux-dude='tmux attach -t git-dude || tmux new-session -s git-dude -d "cd ~/.git-dude && git dude"'
+
+export EDITOR='vim'
 
 # added by travis gem
 [ -f /Users/drew/.travis/travis.sh ] && source /Users/drew/.travis/travis.sh
