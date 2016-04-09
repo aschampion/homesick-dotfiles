@@ -13,3 +13,7 @@
 	lineNumber = true
 [alias]
 	g = grep --break --heading --line-number
+	br = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+	cane = commit --amend --no-edit
+	all-sed = ! git ls-files | xargs sed -i -e
+	addnw = !sh -c 'git diff -w --no-color "$@" | git apply --cached --ignore-whitespace' -
