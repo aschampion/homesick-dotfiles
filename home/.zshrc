@@ -60,6 +60,10 @@ export CUDA_HOME=/usr/local/cuda
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${CUDA_HOME}/lib64:/home/championa/code/cudnn-6.5-linux-R1
 PATH=${CUDA_HOME}/bin:${PATH}
 
+export GUROBI_HOME=/home/championa/code/gurobi604/linux64
+export GUROBI_ROOT_DIR=/home/championa/code/gurobi604/linux64
+
+
 # Fix backspace in vi insertion to be vim-like
 bindkey "^?" backward-delete-char
 
