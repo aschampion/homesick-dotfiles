@@ -1,6 +1,7 @@
 [user]
 	email = andrew.champion@gmail.com
 	name = Andrew Champion
+	signingkey = E1F9EB33F0A035FA
 [github]
 	user = aschampion
 [push]
