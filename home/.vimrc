@@ -28,9 +28,12 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 syntax on
+"colorscheme monokai
 set number
 set ruler
 set showmatch
+set incsearch
+set hlsearch
 
 set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 
