@@ -57,7 +57,7 @@ DEFAULT_USER="championa"
 
 # CUDA paths
 export CUDA_HOME=/usr/local/cuda
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${CUDA_HOME}/lib64:/home/championa/code/cudnn-6.5-linux-R1
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${CUDA_HOME}/lib64:${CUDA_HOME}/extras/CUPTI/lib64
 PATH=${CUDA_HOME}/bin:${PATH}
 
 export GUROBI_HOME=/home/championa/code/gurobi652/linux64
