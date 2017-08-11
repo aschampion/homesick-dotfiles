@@ -44,7 +44,7 @@ source ~/.bashrc
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx sublime vi-mode virtualenv virtualenvwrapper)
+plugins=(colored-man-pages git history-substring-search osx sublime tmux vi-mode virtualenv virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -53,17 +53,31 @@ export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/s
 
 DEFAULT_USER="championa"
 
+# added by travis gem
+[ -f /Users/drew/.travis/travis.sh ] && source /Users/drew/.travis/travis.sh
+
+# CUDA paths
+export CUDA_HOME=/usr/local/cuda
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${CUDA_HOME}/lib64:${CUDA_HOME}/extras/CUPTI/lib64
+PATH=${CUDA_HOME}/bin:${PATH}
+
+export GUROBI_HOME=/home/championa/code/gurobi652/linux64
+export GUROBI_ROOT_DIR=/home/championa/code/gurobi652/linux64
+
+
 # Fix backspace in vi insertion to be vim-like
 bindkey "^?" backward-delete-char
 
 # tmux aliases
-alias tma='tmux attach || tmux'
+alias tma='tmux attach -t'
 alias tmn='tmux new-session -s'
 alias tmux-top='tmux attach -t topy || tmux new-session -s topy -d "htop" \; rename-window htop \; split-window -v -p 15 "sudo iotop -o" \; attach -t topy'
 alias tmux-dude='tmux attach -t git-dude || tmux new-session -s git-dude -d "cd ~/.git-dude && git dude"'
 
+alias git-root='cd ./$(git rev-parse --show-cdup)'
+
 export EDITOR='vim'
 
-# added by travis gem
-[ -f /Users/drew/.travis/travis.sh ] && source /Users/drew/.travis/travis.sh
 
+# added by travis gem
+[ -f /home/championa/.travis/travis.sh ] && source /home/championa/.travis/travis.sh
