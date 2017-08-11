@@ -1,7 +1,14 @@
-set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+set rtp+=$HOME/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
+" python from powerline.vim import setup as powerline_setup
+" python powerline_setup()
+" python del powerline_setup
+
+" Always show statusline
+set laststatus=2
+set showtabline=2
+set noshowmode
+
+set t_Co=256
 
 syntax on
 set number
