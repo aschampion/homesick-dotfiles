@@ -35,7 +35,7 @@ set showmatch
 set incsearch
 set hlsearch
 
-set rtp+=$HOME/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
+set rtp+=/usr/local/lib/python3.7/site-packages/powerline/bindings/vim
 
 " Always show statusline
 set laststatus=2
