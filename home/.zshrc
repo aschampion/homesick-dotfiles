@@ -53,9 +53,6 @@ export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/s
 
 DEFAULT_USER="championa"
 
-# added by travis gem
-[ -f /Users/drew/.travis/travis.sh ] && source /Users/drew/.travis/travis.sh
-
 # CUDA paths
 export CUDA_HOME=/usr/local/cuda
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${CUDA_HOME}/lib64:${CUDA_HOME}/extras/CUPTI/lib64
@@ -79,5 +76,3 @@ alias git-root='cd ./$(git rev-parse --show-cdup)'
 export EDITOR='vim'
 
 
-# added by travis gem
-[ -f /home/championa/.travis/travis.sh ] && source /home/championa/.travis/travis.sh
