@@ -13,6 +13,7 @@
 	insteadOf = https://github.com/
 [grep]
 	lineNumber = true
+	patternType = perl
 [alias]
 	g = grep --break --heading --line-number
 	br = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
