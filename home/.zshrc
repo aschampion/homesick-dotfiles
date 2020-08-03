@@ -79,3 +79,6 @@ export EDITOR='vim'
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
+# Fix slow "hg id" call from agnoster theme prompt
+functions[prompt_hg]=""
