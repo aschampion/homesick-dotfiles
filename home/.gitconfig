@@ -18,7 +18,9 @@
 	g = grep --break --heading --line-number
 	br = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
 	cane = commit --amend --no-edit
-	all-sed = ! git ls-files -z | xargs -0 sed -E -i '' -e
+	# all-sed = ! git ls-files -z | xargs -0 sed -E -i '' -e
+	# Use grep instead to ignore binary files
+	all-sed = ! git grep --cached -Il -z '' | xargs -0 sed -E -i '' -e
 	addnw = !sh -c 'git diff -w --no-color "$@" | git apply --cached --ignore-whitespace' -
 	blog = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 [pull]
