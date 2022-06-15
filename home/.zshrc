@@ -75,6 +75,9 @@ alias git-root='cd ./$(git rev-parse --show-cdup)'
 
 export EDITOR='vim'
 
+export HISTSIZE=9999999
+export SAVEHIST=$HISTSIZE
+
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
