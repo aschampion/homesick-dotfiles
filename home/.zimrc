@@ -1,4 +1,7 @@
 zmodule romkatv/powerlevel10k --use degit
+zmodule environment
+zmodule termtitle
+zmodule utility
 zmodule zsh-users/zsh-completions --fpath src
 zmodule completion
 zmodule zsh-users/zsh-syntax-highlighting
