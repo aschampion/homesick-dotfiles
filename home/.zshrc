@@ -82,3 +82,10 @@ fi
 
 # TREE_COLORS is used by GNU tree. It looks awful with underlined text, so we turn it off.
 export TREE_COLORS=${LS_COLORS//04;}
+
+# Bind ^[[A/^[[B manually so up/down works both before and after zle-line-init
+for key ('^[[A' '^P' ${terminfo[kcuu1]}) bindkey ${key} history-substring-search-up
+for key ('^[[B' '^N' ${terminfo[kcud1]}) bindkey ${key} history-substring-search-down
+for key ('k') bindkey -M vicmd ${key} history-substring-search-up
+for key ('j') bindkey -M vicmd ${key} history-substring-search-down
+unset key
