@@ -73,6 +73,11 @@ export PATH="$PATH:$HOME/.local/bin"
 # Fix slow "hg id" call from agnoster theme prompt
 functions[prompt_hg]=""
 
+# kitty aliases
+alias idot='dot | isvg'
+alias isvg='rsvg-convert | icat'
+alias icat='kitty icat --align=left'
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
